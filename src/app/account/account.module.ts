@@ -1,13 +1,6 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
-
-import { AppComponent } from './app.component';
-import { Ng2Webstorage } from 'ng2-webstorage';
-
-
-import { HttpModule } from '@angular/http';
-import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
+import { RegisterComponent } from './register/register.component';
 
 import {
   MatToolbarModule,
@@ -41,25 +34,17 @@ import {
   MatDatepickerModule,
   MatTableModule
 } from '@angular/material';
-
-
-import { MainComponent } from './layouts/main/main.component';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import { AccountModule } from './account/account.module';
+import { AccountService } from './account.service';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { LoginComponent } from './login/login.component';
 
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    MainComponent
-  ],
   imports: [
-    Ng2Webstorage.forRoot({ prefix: 'drevolution', separator: '-'}),
     FormsModule,
-    AccountModule,
-    BrowserModule,
-    BrowserAnimationsModule,
-  MatToolbarModule,
+    ReactiveFormsModule,
+    CommonModule,
+    MatToolbarModule,
   MatSortModule,
   MatButtonModule,
   MatButtonToggleModule,
@@ -89,12 +74,6 @@ import { AccountModule } from './account/account.module';
   MatInputModule,
   MatDatepickerModule,
   MatTableModule,
-
-
-  HttpModule
-
-
-
   ],
   exports: [
     MatToolbarModule,
@@ -128,8 +107,8 @@ import { AccountModule } from './account/account.module';
   MatDatepickerModule,
   MatTableModule,
   ],
-  providers: [
-],
-  bootstrap: [AppComponent]
+  declarations: [RegisterComponent, LoginComponent],
+  entryComponents: [RegisterComponent, LoginComponent],
+  providers: [AccountService]
 })
-export class AppModule { }
+export class AccountModule { }

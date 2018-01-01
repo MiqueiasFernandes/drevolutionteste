@@ -1,0 +1,87 @@
+<mat-toolbar class="mat-elevation-z6 example-header" color="primary">
+
+  <mat-icon>menu</mat-icon>
+
+  Header
+
+</mat-toolbar>
+
+
+
+
+
+<mat-sidenav-container class="example-container" color="primary">
+
+  <mat-sidenav #sidenav mode="side" opened="logado" class="example-sidenav" [fixedInViewport]="true">
+
+      {{options.fixed ? 'Fixed' : 'Non-fixed'}} Sidenav
+
+  </mat-sidenav>
+
+
+
+  <mat-sidenav-content>
+
+      <p>
+
+          <mat-checkbox>Fixed</mat-checkbox>
+
+      </p>
+
+      <p>
+
+          <mat-form-field>
+
+              <input matInput type="number" placeholder="Top gap">
+
+          </mat-form-field>
+
+      </p>
+
+      <p>
+
+          <mat-form-field>
+
+              <input matInput type="number" placeholder="Bottom gap">
+
+          </mat-form-field>
+
+      </p>
+
+      <p><button mat-button (click)="sidenav.toggle()">Toggle</button></p>
+
+
+
+      <mat-card>
+          
+
+<input type="text"  [(ngModel)]="name">
+{{name}}
+       Registrar usuario
+
+       <button mat-button (click)="register()">Registrar</button>
+
+
+      </mat-card>
+
+      <mat-card>
+       Fazer login
+ {{log}}
+        <button mat-button (click)="login()">Login</button>
+    </mat-card>
+
+      <mat-card>oi</mat-card>
+
+
+
+
+
+
+
+  </mat-sidenav-content>
+
+</mat-sidenav-container>
+
+
+
+<!-- <mat-toolbar class="example-footer">Footer</mat-toolbar> -->

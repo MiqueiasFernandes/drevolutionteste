@@ -1,0 +1,25 @@
+
+
+<h1 mat-dialog-title>Login</h1>
+
+
+
+<mat-error *ngIf="_error.login_failure">{{_error.login_failure[0]}}</mat-error>
+
+
+<mat-error *ngIf=" _error.Password">{{_error.Password[0]}}</mat-error>
+
+<div mat-dialog-content>
+
+  <mat-form-field>
+    <input matInput type="text"  [(ngModel)]="username"  placeholder="Email ou Usuaio" required>
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput type="password" [(ngModel)]="password" placeholder="senha" required>
+  </mat-form-field>
+  
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Cancelar</button>
+  <button mat-button cdkFocusInitial (click)="login()">Login</button>
+</div>

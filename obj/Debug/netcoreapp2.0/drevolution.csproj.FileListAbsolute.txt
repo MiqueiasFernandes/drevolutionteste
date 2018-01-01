@@ -1,0 +1,10 @@
+C:\drevolution\obj\Debug\netcoreapp2.0\drevolution.csproj.CoreCompileInputs.cache
+C:\drevolution\obj\Debug\netcoreapp2.0\drevolution.AssemblyInfoInputs.cache
+C:\drevolution\obj\Debug\netcoreapp2.0\drevolution.AssemblyInfo.cs
+C:\drevolution\bin\Debug\netcoreapp2.0\drevolution.deps.json
+C:\drevolution\bin\Debug\netcoreapp2.0\drevolution.runtimeconfig.json
+C:\drevolution\bin\Debug\netcoreapp2.0\drevolution.runtimeconfig.dev.json
+C:\drevolution\bin\Debug\netcoreapp2.0\drevolution.dll
+C:\drevolution\bin\Debug\netcoreapp2.0\drevolution.pdb
+C:\drevolution\obj\Debug\netcoreapp2.0\drevolution.dll
+C:\drevolution\obj\Debug\netcoreapp2.0\drevolution.pdb

@@ -1,0 +1,34 @@
+
+
+<h1 mat-dialog-title>Registrar novo usuário</h1>
+
+
+
+<div mat-dialog-content>
+
+  <mat-form-field>
+    <input matInput type="text" tabindex="1" [(ngModel)]="user.FirstName" placeholder="Primeio nome" required>
+    <mat-error *ngIf="_error.FirstName">{{_error.FirstName[0]}}</mat-error>
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput type="text"  [(ngModel)]="user.LastName" placeholder="Ultimo nome"  required>
+    <mat-error *ngIf="_error.LastName">{{_error.LastName[0]}}</mat-error>
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput type="text" [(ngModel)]="user.UserName"  placeholder="Usuario"  required>
+    <mat-error *ngIf="_error.UserName">{{_error.UserName[0]}}</mat-error>
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput type="email"  [(ngModel)]="user.Email"  placeholder="Email" required>
+    <mat-error *ngIf="_error.Email">{{_error.Email[0]}}</mat-error>
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput type="password" [(ngModel)]="user.Password" placeholder="senha" required>
+    <mat-error *ngIf="_error.Password || _error.PasswordTooShort">{{_error.Password ? _error.Password[0] : _error.PasswordTooShort[0]}}</mat-error>
+  </mat-form-field>
+
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Cancelar</button>
+  <button mat-button cdkFocusInitial (click)="register()">Registrar</button>
+</div>
